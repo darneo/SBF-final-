@@ -1,0 +1,19 @@
+package com.example.demo;
+
+import com.example.demo.model.Order;
+import com.example.demo.Service.OrderService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequiredArgsConstructor
+@RequestMapping("/api/orders")
+public class OrderController {
+    private final OrderService orderService;
+
+    @PostMapping
+    public Order createOrder(@RequestBody Order order) throws JsonProcessingException {
+        return orderService.createOrder(order);
+    }
+}
