@@ -1,6 +1,5 @@
-package com.example.demo.repository;
-
-import com.example.demo.model.OutboxEvent;
+package com.example.orderservice.repository;
+import com.example.orderservice.model.OutboxEvent;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

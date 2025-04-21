@@ -1,10 +1,9 @@
-package com.example.demo.Service;
-
-import com.example.demo.dto.OrderEvent;
-import com.example.demo.model.Order;
-import com.example.demo.model.OutboxEvent;
-import com.example.demo.repository.OrderRepository;
-import com.example.demo.repository.OutboxEventRepository;
+package com.example.orderservice.Service;
+import com.example.orderservice.dto.OrderEvent;
+import com.example.orderservice.model.Order;
+import com.example.orderservice.model.OutboxEvent;
+import com.example.orderservice.repository.OrderRepository;
+import com.example.orderservice.repository.OutboxEventRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.transaction.Transactional;

@@ -1,7 +1,7 @@
-package com.example.demo.scheduler;
+package com.example.orderservice.scheduler;
 
-import com.example.demo.model.OutboxEvent;
-import com.example.demo.Service.OutboxService;
+import com.example.orderservice.model.OutboxEvent;
+import com.example.orderservice.Service.OutboxService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;

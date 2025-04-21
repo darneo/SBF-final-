@@ -1,7 +1,7 @@
-package com.example.demo;
+package com.example.orderservice;
 
-import com.example.demo.model.Order;
-import com.example.demo.Service.OrderService;
+import com.example.orderservice.model.Order;
+import com.example.orderservice.Service.OrderService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

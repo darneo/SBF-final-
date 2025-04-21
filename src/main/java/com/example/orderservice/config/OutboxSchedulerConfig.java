@@ -1,5 +1,4 @@
-package com.example.demo.config;
-
+package com.example.orderservice.config;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
