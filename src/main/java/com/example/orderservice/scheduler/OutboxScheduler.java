@@ -2,8 +2,8 @@ package com.example.orderservice.scheduler;
 
 import com.example.orderservice.model.OutboxEvent;
 import com.example.orderservice.Service.OutboxService;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -13,11 +13,17 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-@RequiredArgsConstructor
-@Slf4j
 public class OutboxScheduler {
+
+    private static final Logger log = LoggerFactory.getLogger(OutboxScheduler.class);
+
     private final OutboxService outboxService;
     private final KafkaTemplate<String, String> kafkaTemplate;
+
+    public OutboxScheduler(OutboxService outboxService, KafkaTemplate<String, String> kafkaTemplate) {
+        this.outboxService = outboxService;
+        this.kafkaTemplate = kafkaTemplate;
+    }
 
     @Scheduled(fixedRate = 5000) // Run every 5 seconds
     @Transactional
